@@ -225,7 +225,5 @@ if __name__ == '__main__':
     if data[-1] not in res:
         res.append(data[-1])
     end = time.time()
-    a = bends_identify(res)
-    # print(len(a))
     print(end - start)
     # data_save(res, 'gsps3')
