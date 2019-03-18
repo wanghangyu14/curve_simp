@@ -6,8 +6,6 @@ import xlwt
 import numpy as np
 from scipy.integrate import trapz
 
-from evaluate import calcu_len, calcu_ang
-
 
 class Piont(object):
 
@@ -140,7 +138,6 @@ def bends_identify(data):
                     t += 1
                     if count > maxc:
                         maxc = count
-                    break
             else:
                 if count != 1:
                     result.append(data[h:h + maxc + 1])
@@ -151,7 +148,6 @@ def bends_identify(data):
                     result.append(data[h:t])
                     h = t - 1
                     t = h + 3
-                break
     result.append(data[h:len(data)])
     return result
 
