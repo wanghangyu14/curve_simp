@@ -224,6 +224,7 @@ if __name__ == '__main__':
         res.append(data[0])
     if data[-1] not in res:
         res.append(data[-1])
+    res.sort(key=lambda p: p.id)
     end = time.time()
     print(end - start)
     # data_save(res, 'gsps3')
